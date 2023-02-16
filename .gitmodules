@@ -1,6 +1,6 @@
 [submodule "frontend"]
 	path = frontend
-	url = git@github.com:NotNullDev/nano-management-svelte.git
+	url = git@github.com:NotNullDev/nano-management-mantine.git
 [submodule "backend"]
 	path = backend
 	url = git@github.com:NotNullDev/nano-management-backend.git
