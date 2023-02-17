@@ -16,6 +16,9 @@
 # build image (dev)
 docker buildx build --progress plain -t aa/bb .
 docker run -p 7000:8090 aa/bb
+
+# onliner
+git submodule update --recursive --remote &&  docker buildx build --progress plain -t aa/bb . && docker run -p 7000:8090 aa/bb
 ```
 
 # Build process

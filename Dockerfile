@@ -30,7 +30,7 @@ COPY backend ./
 
 RUN \
     --mount=type=cache,target=/root/.cache/go-build \
-    GOCACHE=/root/.cache/go-build \
+    export GOCACHE=/root/.cache/go-build; \
     go mod tidy
 
 
