@@ -18,7 +18,12 @@ docker buildx build --progress plain -t aa/bb .
 docker run -p 7000:8090 aa/bb
 
 # onliner
-git submodule update --recursive --remote &&  docker buildx build --progress plain -t aa/bb . && docker run -p 7000:8090 aa/bb
+git submodule update --init && git submodule update --recursive --remote &&  docker buildx build --progress plain -t gitea.notnulldev.com/notnulldev/nano-management . && docker run -p 7000:8090 gitea.notnulldev.com/notnulldev/nano-management
+
+# push
+
+git submodule update --init && git submodule update --recursive --remote &&  docker buildx build --progress plain -t gitea.notnulldev.com/notnulldev/nano-management . && docker push gitea.notnulldev.com/notnulldev/nano-management
+
 ```
 
 # Build process
@@ -65,5 +70,6 @@ git submodule add git@github.com:NotNullDev/nano-management-backend.git backend
 
 ```bash
 # to update the submodules
+git submodule update --init
 git submodule update --recursive --remote
 ```
